@@ -1,0 +1,37 @@
+ecosystems:
+  - id: "npm"
+    hosts:
+      - "registry.npmjs.org"
+      - "*.npmjs.org"
+      - "registry.yarnpkg.com"
+      - "*.yarnpkg.com"
+    patterns:
+      # Metadata / index retrieval
+      - name: "npm-metadata"
+        path_regex: "^/(?P<package>[^/]+)/?$"
+        # Version unknown - skip check or handle separately
+      # Tarball download
+      - name: "npm-tarball"
+        path_regex: "^/(?P<package>[^/]+)/-/(?P<file>[^/]+)\\.tgz$"
+        extract:
+          version_from_file_regex: "^[^-]+-(?P<version>.+)$"
+      # Scoped package tarball
+      - name: "npm-scoped-tarball"
+        path_regex: "^/(?P<scope>@[^/]+)%2[Ff](?P<name>[^/]+)/-/(?P<file>[^/]+)\\.tgz$"
+        extract:
+          version_from_file_regex: "^[^-]+-(?P<version>.+)$"
+
+  - id: "RubyGems"
+    hosts:
+      - "rubygems.org"
+      - "*.rubygems.org"
+    patterns:
+      # Gem file download: /downloads/rails-7.1.0.gem
+      - name: "rubygems-gem"
+        path_regex: "^/downloads/(?P<file>[^/]+)\\.gem$"
+        extract:
+          # rails-7.1.0 → name=rails, version=7.1.0
+          name_version_from_file_regex: "^(?P<name>.+)-(?P<version>[0-9][^-]+)$"
+      # API calls (version unknown)
+      - name: "rubygems-api"
+        path_regex: "^/api/v1/gems/(?P<name>[^/]+)\\.json$"
