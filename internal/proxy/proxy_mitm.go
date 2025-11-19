@@ -22,10 +22,13 @@ import (
 
 // Known package registry hosts that we should intercept
 var knownRegistries = []string{
+	// npm / yarn
 	"registry.npmjs.org",
 	"registry.yarnpkg.com",
+	// RubyGems
 	"rubygems.org",
 	"index.rubygems.org",
+	// PyPI
 	"files.pythonhosted.org",
 	"pypi.org",
 	"pypi.python.org",

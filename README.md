@@ -55,6 +55,9 @@ chaingate -- yarn add react
 # pnpm
 chaingate -- pnpm install express
 
+# pip (in virtual environment)
+chaingate -- pip install requests
+
 # gem
 chaingate -- gem install rails
 ```
@@ -194,6 +197,10 @@ Chain Gate outputs structured JSON logs for easy parsing:
 - **npm**: npm, Yarn Classic (v1.x), Yarn Berry (v2+/v4.x), pnpm
   - Registries: `registry.npmjs.org`, `registry.yarnpkg.com`
   - Detection: Tarball URLs with pattern matching
+- **PyPI**: pip
+  - Registries: `files.pythonhosted.org`
+  - Detection: Wheel and source distribution downloads
+  - Features: PEP 503 package name normalization
 - **RubyGems**: gem, bundler
   - Registries: `rubygems.org`
   - Detection: Gem file downloads
@@ -206,16 +213,18 @@ Chain Gate outputs structured JSON logs for easy parsing:
 | Yarn Classic | 1.x | ✅ Working |
 | Yarn Berry | 4.11.0 | ✅ Working |
 | pnpm | 9.x | ✅ Working |
+| pip | 24.x | ✅ Working |
 | gem | 3.x | ✅ Working |
 
 ### Known Limitations
 
 - **Yarn Berry**: Requires `NODE_EXTRA_CA_CERTS` for MITM certificate trust
 - **Cached packages**: If a package is already cached locally, it won't be checked again
+- **pip**: Requires virtual environment for proper proxy configuration
 
 ### Planned Support
 
-- **Python**: pip, uv, poetry
+- **Python**: poetry, uv
 - **Go**: go get, go install
 
 ## Development

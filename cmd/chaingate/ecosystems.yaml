@@ -35,3 +35,27 @@ ecosystems:
       # API calls (version unknown)
       - name: "rubygems-api"
         path_regex: "^/api/v1/gems/(?P<name>[^/]+)\\.json$"
+
+  - id: "PyPI"
+    hosts:
+      - "files.pythonhosted.org"
+      - "*.pythonhosted.org"
+    patterns:
+      # Wheel download: /packages/xx/xx/hash/package-1.0.0-py3-none-any.whl
+      - name: "pypi-wheel"
+        path_regex: "^/packages/[0-9a-f]{2}/[0-9a-f]{2}/[0-9a-f]+/(?P<file>.+)\\.whl$"
+        extract:
+          # requests-2.31.0-py3-none-any → name=requests, version=2.31.0
+          name_version_from_file_regex: "^(?P<name>.+?)-(?P<version>[0-9][^-]*(-[^-]+)*)-[^-]+-[^-]+-[^-]+$"
+      # Source distribution (tar.gz): /packages/xx/xx/hash/package-1.0.0.tar.gz
+      - name: "pypi-sdist-targz"
+        path_regex: "^/packages/[0-9a-f]{2}/[0-9a-f]{2}/[0-9a-f]+/(?P<file>.+)\\.tar\\.gz$"
+        extract:
+          # requests-2.31.0 → name=requests, version=2.31.0
+          name_version_from_file_regex: "^(?P<name>.+)-(?P<version>[0-9].*)$"
+      # Source distribution (zip): /packages/xx/xx/hash/package-1.0.0.zip
+      - name: "pypi-sdist-zip"
+        path_regex: "^/packages/[0-9a-f]{2}/[0-9a-f]{2}/[0-9a-f]+/(?P<file>.+)\\.zip$"
+        extract:
+          # requests-2.31.0 → name=requests, version=2.31.0
+          name_version_from_file_regex: "^(?P<name>.+)-(?P<version>[0-9].*)$"
