@@ -269,10 +269,6 @@ go build -o chaingate ./cmd/chaingate
 go test ./...
 ```
 
-## Contributing
-
-Contributions are welcome! Please see [ARCHITECTURE.md](./ARCHITECTURE.md) for design details.
-
 ## License
 
 [To be determined]
@@ -280,5 +276,4 @@ Contributions are welcome! Please see [ARCHITECTURE.md](./ARCHITECTURE.md) for d
 ## Acknowledgments
 
 - **Open Source Security Foundation (OSSF)**: For maintaining the malicious-packages database
-- **safe-chain**: For inspiration on package manager security
 - **bbolt**: For the reliable embedded database
