@@ -1,7 +1,7 @@
 package policy
 
 import (
-	"github.com/tomoyayamashita/chain-gate/internal/ecosystem"
+	"github.com/Pirikara/chaingate/internal/ecosystem"
 )
 
 // Engine makes policy decisions

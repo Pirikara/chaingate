@@ -229,7 +229,7 @@ Chain Gate outputs structured JSON logs for easy parsing:
 ### Project Structure
 
 ```
-chain-gate/
+chaingate/
 ├── cmd/
 │   └── chaingate/        # CLI entry point
 ├── internal/

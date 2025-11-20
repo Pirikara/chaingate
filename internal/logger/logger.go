@@ -6,8 +6,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/tomoyayamashita/chain-gate/internal/ecosystem"
-	"github.com/tomoyayamashita/chain-gate/internal/policy"
+	"github.com/Pirikara/chaingate/internal/ecosystem"
+	"github.com/Pirikara/chaingate/internal/policy"
 )
 
 // Level represents log level

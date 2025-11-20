@@ -12,12 +12,12 @@ import (
 	"time"
 
 	"github.com/spf13/cobra"
-	"github.com/tomoyayamashita/chain-gate/internal/cache"
-	"github.com/tomoyayamashita/chain-gate/internal/ecosystem"
-	"github.com/tomoyayamashita/chain-gate/internal/logger"
-	"github.com/tomoyayamashita/chain-gate/internal/ossfmalware"
-	"github.com/tomoyayamashita/chain-gate/internal/policy"
-	"github.com/tomoyayamashita/chain-gate/internal/proxy"
+	"github.com/Pirikara/chaingate/internal/cache"
+	"github.com/Pirikara/chaingate/internal/ecosystem"
+	"github.com/Pirikara/chaingate/internal/logger"
+	"github.com/Pirikara/chaingate/internal/ossfmalware"
+	"github.com/Pirikara/chaingate/internal/policy"
+	"github.com/Pirikara/chaingate/internal/proxy"
 )
 
 // デフォルト設定ファイルを埋め込み

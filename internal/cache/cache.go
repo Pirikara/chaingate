@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tomoyayamashita/chain-gate/internal/ecosystem"
-	"github.com/tomoyayamashita/chain-gate/internal/ossfmalware"
-	"github.com/tomoyayamashita/chain-gate/internal/policy"
+	"github.com/Pirikara/chaingate/internal/ecosystem"
+	"github.com/Pirikara/chaingate/internal/ossfmalware"
+	"github.com/Pirikara/chaingate/internal/policy"
 )
 
 // ThreatIntelCache wraps the OSSF malware client

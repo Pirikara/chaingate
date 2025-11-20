@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tomoyayamashita/chain-gate/internal/ecosystem"
+	"github.com/Pirikara/chaingate/internal/ecosystem"
 )
 
 func TestEngine_Evaluate(t *testing.T) {

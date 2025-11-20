@@ -14,10 +14,10 @@ import (
 
 	"github.com/elazarl/goproxy"
 	"github.com/google/uuid"
-	"github.com/tomoyayamashita/chain-gate/internal/cache"
-	"github.com/tomoyayamashita/chain-gate/internal/ecosystem"
-	"github.com/tomoyayamashita/chain-gate/internal/logger"
-	"github.com/tomoyayamashita/chain-gate/internal/policy"
+	"github.com/Pirikara/chaingate/internal/cache"
+	"github.com/Pirikara/chaingate/internal/ecosystem"
+	"github.com/Pirikara/chaingate/internal/logger"
+	"github.com/Pirikara/chaingate/internal/policy"
 )
 
 // Known package registry hosts that we should intercept

@@ -29,7 +29,7 @@ func NewCertManager(certDir string) (*CertManager, error) {
 		if err != nil {
 			return nil, fmt.Errorf("failed to get home directory: %w", err)
 		}
-		certDir = filepath.Join(home, ".chain-gate", "certs")
+		certDir = filepath.Join(home, ".chaingate", "certs")
 	}
 
 	// Ensure directory exists

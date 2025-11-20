@@ -1,4 +1,4 @@
-module github.com/tomoyayamashita/chain-gate
+module github.com/Pirikara/chaingate
 
 go 1.23.1
 
