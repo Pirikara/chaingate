@@ -237,8 +237,6 @@ chaingate/
 │   ├── cache/            # Threat intelligence cache (wrapper)
 │   ├── policy/           # Policy engine
 │   └── logger/           # JSON logging
-├── configs/
-│   └── ecosystems.yaml   # Ecosystem patterns
 └── ARCHITECTURE.md       # Detailed design docs
 ```
 
