@@ -23,8 +23,6 @@ Chain Gate uses a proxy-based architecture to intercept package manager requests
 5. **Policy Engine**: Decides whether to allow, warn, or block based on policy
 6. **Smart Sync**: Checks GitHub HEAD on every execution, only downloads when upstream changes
 
-See [ARCHITECTURE.md](./ARCHITECTURE.md) for detailed design documentation.
-
 ## Installation
 
 ### From Source
