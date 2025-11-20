@@ -197,7 +197,7 @@ Chain Gate outputs structured JSON logs for easy parsing:
 - **npm**: npm, Yarn Classic (v1.x), Yarn Berry (v2+/v4.x), pnpm
   - Registries: `registry.npmjs.org`, `registry.yarnpkg.com`
   - Detection: Tarball URLs with pattern matching
-- **PyPI**: pip
+- **PyPI**: pip, uv, poetry
   - Registries: `files.pythonhosted.org`
   - Detection: Wheel and source distribution downloads
   - Features: PEP 503 package name normalization
@@ -214,6 +214,8 @@ Chain Gate outputs structured JSON logs for easy parsing:
 | Yarn Berry | 4.11.0 | ✅ Working |
 | pnpm | 9.x | ✅ Working |
 | pip | 24.x | ✅ Working |
+| uv | 0.6.x | ✅ Working |
+| poetry | 2.x | ✅ Working |
 | gem | 3.x | ✅ Working |
 
 ### Known Limitations
@@ -224,7 +226,6 @@ Chain Gate outputs structured JSON logs for easy parsing:
 
 ### Planned Support
 
-- **Python**: poetry, uv
 - **Go**: go get, go install
 
 ## Development
