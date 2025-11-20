@@ -224,10 +224,6 @@ Chain Gate outputs structured JSON logs for easy parsing:
 - **Cached packages**: If a package is already cached locally, it won't be checked again
 - **pip**: Requires virtual environment for proper proxy configuration
 
-### Planned Support
-
-- **Go**: go get, go install
-
 ## Development
 
 ### Project Structure
